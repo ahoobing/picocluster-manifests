@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: northstar-deployment
+  labels:
+    app: northstar 
+spec:
+  replicas: 3 
+  selector:
+    matchLabels:
+      app: northstar 
+  template:
+    metadata:
+      labels:
+        app: northstar 
+    spec:
+      containers:
+      - name: northstar 
+        image: ahoobing1976/northstar:latest
+        ports:
+        - containerPort: 4000
+      imagePullSecrets:
+      - name: regcred
