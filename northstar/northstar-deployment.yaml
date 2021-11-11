@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: northstar 
-        image: ahoobing1976/northstar:9
+        image: ahoobing1976/northstar:10
         ports:
         - containerPort: 4000
         imagePullPolicy: Always
