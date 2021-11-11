@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: northstarlb 
+spec:
+  selector:
+    app: northstar 
+  ports:
+    - protocol: TCP
+      port: 4000 
+      targetPort: 4000 
+  clusterIP: 10.43.0.69 
+  type: LoadBalancer
+status:
+  loadBalancer:
+    ingress:
+    - ip: 192.168.86.240 
