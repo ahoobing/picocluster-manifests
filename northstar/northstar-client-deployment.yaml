@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: northstar-client 
-        image: ahoobing1976/northstar-client:4
+        image: ahoobing1976/northstar-client:5
         ports:
         - containerPort: 80 
         imagePullPolicy: Always
