@@ -6,14 +6,12 @@ spec:
   selector:
     app: northstar 
   ports:
-    - protocol: TCP
+    - name: server 
+      protocol: TCP
       port: 4000 
       targetPort: 4000 
-    - protocol: TCP
-      port: 80
-      targetPort:8080 
-  clusterIP: 10.43.0.69 
   type: LoadBalancer
+
 status:
   loadBalancer:
     ingress:
