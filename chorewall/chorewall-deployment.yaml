@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chorewall-deployment
+  labels:
+    app: chorewall 
+spec:
+  replicas: 3 
+  selector:
+    matchLabels:
+      app: chorewall 
+  template:
+    metadata:
+      labels:
+        app: chorewall 
+    spec:
+      containers:
+      - name: chorewall 
+        image: ahoobing1976/chorewall:1
+        ports:
+        - containerPort: 3000
+        imagePullPolicy: Always
+      imagePullSecrets:
+      - name: regcred
+
