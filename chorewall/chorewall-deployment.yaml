@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: chorewall 
-        image: ahoobing1976/chorewall:1
+        image: ahoobing1976/chorewall:latest
         ports:
         - containerPort: 3000
         imagePullPolicy: Always
