@@ -1,29 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: budgeto-deployment
+  name: budgeto-client-deployment
   labels:
-    app: budgeto 
+    app: budgeto-client
 spec:
   replicas: 3 
   selector:
     matchLabels:
-      app: budgeto 
+      app: budgeto-client 
   template:
     metadata:
       labels:
-        app: budgeto 
+        app: budgeto-client
     spec:
       containers:
       - name: budgeto-client
         image: ahoobing1976/budgeto-client:1
         ports:
         - containerPort: 3000
-        imagePullPolicy: Always
-      - name: budgeto-server
-        image: ahoobing1976/budgeto-server:1
-        ports:
-        - containerPort: 4000
         imagePullPolicy: Always
       imagePullSecrets:
       - name: regcred
