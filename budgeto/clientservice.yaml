@@ -4,7 +4,7 @@ metadata:
   name: budgeto-client-service
 spec:
   selector:
-    app:  budgeto-client-deployment
+    app:  budgeto-client
   ports:
     - name: web
       port: 80
