@@ -15,7 +15,7 @@ spec:
         app: budgeto 
     spec:
       containers:
-      - name: northstar 
+      - name: budgeto
         image: ahoobing1976/budgeto:latest
         ports:
         - containerPort: 4000
