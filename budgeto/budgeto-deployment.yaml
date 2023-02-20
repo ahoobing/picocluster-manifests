@@ -15,8 +15,13 @@ spec:
         app: budgeto 
     spec:
       containers:
-      - name: budgeto
-        image: ahoobing1976/budgeto:latest
+      - name: budgeto-client
+        image: ahoobing1976/budgeto-client:1
+        ports:
+        - containerPort: 3000
+        imagePullPolicy: Always
+      - name: budgeto-server
+        image: ahoobing1976/budgeto-server:1
         ports:
         - containerPort: 4000
         imagePullPolicy: Always
