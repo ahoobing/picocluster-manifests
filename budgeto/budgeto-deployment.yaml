@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: budgeto-deployment
+  labels:
+    app: budgeto 
+spec:
+  replicas: 3 
+  selector:
+    matchLabels:
+      app: budgeto 
+  template:
+    metadata:
+      labels:
+        app: budgeto 
+    spec:
+      containers:
+      - name: northstar 
+        image: ahoobing1976/budgeto:latest
+        ports:
+        - containerPort: 4000
+        imagePullPolicy: Always
+      imagePullSecrets:
+      - name: regcred
+
