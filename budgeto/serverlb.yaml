@@ -1,16 +1,17 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: budgeto-server-lb
-  annotations:
-    service.beta.kubernetes.io/do-loadbalancer-size-unit: "3"
-    service.beta.kubernetes.io/do-loadbalancer-disable-lets-encrypt-dns-records: "false"
+  name: budgeto-server-lb 
 spec:
-  type: LoadBalancer
   selector:
     app: budgeto-server
   ports:
-    - name: http
+    - name: server
       protocol: TCP
-      port: 80
-      targetPort: 4000
+      port: 4000 
+      targetPort: 4000 
+  type: LoadBalancer
+status:
+  loadBalancer:
+    ingress:
+    - ip: 192.168.86.239 
