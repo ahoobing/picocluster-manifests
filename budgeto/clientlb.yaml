@@ -6,7 +6,7 @@ spec:
   selector:
     app: budgeto-client
   ports:
-    - name: server
+    - name: client
       protocol: TCP
       port: 3000 
       targetPort: 3000 
