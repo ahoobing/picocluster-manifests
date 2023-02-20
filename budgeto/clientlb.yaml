@@ -2,7 +2,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: nginx
+  name: clientingress
   annotations:
     ingress.kubernetes.io/ssl-redirect: "false"
 spec:
@@ -13,6 +13,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: budgeto-client
+            name: budgeto-client-deployment
             port:
               number: 80
