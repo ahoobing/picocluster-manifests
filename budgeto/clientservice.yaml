@@ -1,0 +1,11 @@
+kind: Service
+metadata:
+  name: budgeto-client-service
+  labels:
+    run: nginx
+spec:
+  ports:
+    - port: 80
+      protocol: TCP
+  selector:
+    app:  budgeto-client-deployment
