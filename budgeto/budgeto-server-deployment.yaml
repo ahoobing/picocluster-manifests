@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: budgeto-server
-        image: ahoobing1976/budgeto-server:2
+        image: ahoobing1976/budgeto-server:3
         ports:
         - containerPort: 4000
         imagePullPolicy: Always
