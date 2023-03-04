@@ -15,4 +15,11 @@ spec:
           service:
             name: budgeto-client-service
             port:
-              number: 4001
+              number: 80
+      - path: /server
+        pathType: Prefix
+        backend:
+          service:
+            name: budgeto-server-service
+            port:
+              number: 4000
