@@ -9,4 +9,4 @@ spec:
     - name: web
       port: 4000
       targetPort: 4000
-  type: LoadBalancer
+  - type: LoadBalancer
