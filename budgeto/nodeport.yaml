@@ -7,8 +7,8 @@ spec:
   type: NodePort
   ports:
     - name: traefik
-      port: 80
-      nodePort: 30182
-      targetPort: 80
+      port: 9500
+      targetPort: 9100
+  type: LoadBalancer
   selector:
     app: traefik
